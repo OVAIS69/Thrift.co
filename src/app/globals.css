@@ -1,26 +1,53 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-background: hsl(40 20% 97%);
+  --color-foreground: hsl(30 10% 15%);
+
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(30 10% 15%);
+
+  --color-popover: hsl(0 0% 100%);
+  --color-popover-foreground: hsl(30 10% 15%);
+
+  --color-primary: hsl(85 30% 35%);
+  --color-primary-foreground: hsl(40 20% 97%);
+
+  --color-secondary: hsl(40 15% 90%);
+  --color-secondary-foreground: hsl(30 10% 15%);
+
+  --color-muted: hsl(40 10% 90%);
+  --color-muted-foreground: hsl(30 5% 45%);
+
+  --color-accent: hsl(85 20% 55%);
+  --color-accent-foreground: hsl(30 10% 15%);
+
+  --color-destructive: hsl(0 60% 50%);
+  --color-destructive-foreground: hsl(0 0% 98%);
+
+  --color-border: hsl(40 10% 85%);
+  --color-input: hsl(40 10% 85%);
+  --color-ring: hsl(85 30% 35%);
+
+  --radius-lg: 0.75rem;
+  --radius-md: calc(0.75rem - 2px);
+  --radius-sm: calc(0.75rem - 4px);
+
+  /* Custom Brand Palette */
+  --color-thrift-olive: hsl(85 30% 35%);
+  --color-thrift-sage: hsl(85 20% 55%);
+  --color-thrift-beige: hsl(40 20% 97%);
+  --color-thrift-clay: hsl(30 25% 40%);
+  --color-thrift-charcoal: hsl(30 10% 15%);
+
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans), sans-serif;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
