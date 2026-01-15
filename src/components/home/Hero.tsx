@@ -14,8 +14,10 @@ export function Hero() {
             </div>
 
             {/* Abstract Shapes/Blobs */}
-            <div className="absolute top-10 left-10 w-64 h-64 bg-thrift-olive/20 rounded-full blur-3xl" />
-            <div className="absolute bottom-10 right-10 w-96 h-96 bg-thrift-clay/20 rounded-full blur-3xl" />
+            {/* Animated Background Blobs */}
+            <div className="absolute top-0 -left-4 w-72 h-72 bg-thrift-olive/30 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob" />
+            <div className="absolute top-0 -right-4 w-72 h-72 bg-thrift-orange/30 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000" />
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-thrift-teal/30 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000" />
 
             <div className="container relative z-10 px-4 text-center">
                 <motion.div
@@ -35,7 +37,9 @@ export function Hero() {
                     className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold tracking-tight text-thrift-charcoal mb-6 leading-[1.1]"
                 >
                     Curated Thrift. <br />
-                    <span className="italic font-light text-thrift-olive">One of a Kind.</span>
+                    <span className="italic font-light text-transparent bg-clip-text bg-gradient-to-r from-thrift-olive via-thrift-teal to-thrift-orange animate-gradient-x">
+                        One of a Kind.
+                    </span>
                 </motion.h1>
 
                 <motion.p

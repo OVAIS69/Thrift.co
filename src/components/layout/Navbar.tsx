@@ -60,7 +60,7 @@ export function Navbar() {
                             className="text-sm font-medium hover:text-thrift-olive transition-colors relative group"
                         >
                             {link.label}
-                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-thrift-olive transition-all group-hover:w-full" />
+                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-thrift-olive to-thrift-teal transition-all duration-300 group-hover:w-full" />
                         </Link>
                     ))}
                 </nav>
